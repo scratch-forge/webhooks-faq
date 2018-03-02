@@ -34,15 +34,52 @@ See below ![Sequence Diagram](image/webhook.svg)
 Autodesk folks have created a very nice and intuitive tutorial at: https://developer.autodesk.com/en/docs/webhooks/v1/tutorials/ Please take a look.
 
 
-### What are the type of events on which my application can create hook
+### What are the type of events on which my application can create hook?
 
 You can find list of all type of events at [https://developer.autodesk.com/en/docs/webhooks/v1/overview/webhooks-events/](https://developer.autodesk.com/en/docs/webhooks/v1/overview/webhooks-events/)
 
+
+### How to ensure security of callback payload? Or, how to ensure that callback is being invoked from a valid source (in this case, Autodesk Webhooks service)?
+
+* Set a Token of your choice using [POST /tokens](https://developer.autodesk.com/en/docs/webhooks/v1/reference/http/tokens-POST/)
+* Use this Token to validate the payload: [Verify Payload Signature](https://developer.autodesk.com/en/docs/webhooks/v1/tutorials/how-to-verify-payload-signature/).
+
+
+### Can I create a webhook which invokes callback URL for "all" the events?
+
+Yes, you can create a webhook to listen on all the Data-Management events. You can use [POST systems/:system/hooks](https://developer.autodesk.com/en/docs/webhooks/v1/reference/http/systems-system-hooks-POST/) API for creating a webhook which would listen for all the events.
+
+
+### Can I create a webhook which invokes callback URL for "a specific event"?
+
+You can create a webhook to listen to a specific Data-Management event. You can use [POST systems/:system/events/:event/hooks](https://developer.autodesk.com/en/docs/webhooks/v1/reference/http/systems-system-events-event-hooks-POST/).
+
+
+### Can I retrieve list of all the webhooks created by my application?
+
+You can retrieve lists of all the hooks by calling [GET systems/:system/hooks](https://developer.autodesk.com/en/docs/webhooks/v1/tutorials/retrieve-list-of-hooks/)
+
+### Can I retrieve list of all the webhooks created by my application for a specific event?
+
+You can retrieve lists of hooks by calling [GET systems/:system/events/:event/hooks](https://developer.autodesk.com/en/docs/webhooks/v1/reference/http/systems-system-events-event-hooks-GET/)
+
+
+### Can I retrieve completel details of a webhooks created by my application?
+
+You can retrieve details of a webhook by calling [GET systems/:system/events/:event/hooks/:hook_id](https://developer.autodesk.com/en/docs/webhooks/v1/reference/http/systems-system-events-event-hooks-hook_id-GET/)
+
+
+### I would like to delete one of the webhook created. How should I do it?
+
+Please see tutorial section [Delete a Webhook](https://developer.autodesk.com/en/docs/webhooks/v1/tutorials/delete-a-hook/)
+
+
 ### Is there any sample app?
 
-I found one at: https://github.com/Autodesk-Forge/data.management-nodejs-webhook
+I found one at: [Autodesk-Forge/data.management-nodejs-webhook](https://github.com/Autodesk-Forge/data.management-nodejs-webhook)
 
-You can also find related information at: https://forge.autodesk.com/blog/webhooks-data-management-api-nodejs-sample
+You can also find related information at [blog](https://forge.autodesk.com/blog/webhooks-data-management-api-nodejs-sample)
+
 
 ### Where can I get additional help of Forge Webhooks?
 
