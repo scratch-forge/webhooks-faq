@@ -1,0 +1,21 @@
+Title: Webhooks
+participant File/Folder
+participant Webhooks
+participant YourCallbackServer
+participant YourApplication
+
+Note right of YourApplication: Event: Identify event you\nare interested in
+Note right of YourApplication: Scope: Identify folder/project\nthat you want to monitor
+Note right of YourCallbackServer: Callback: Setup a callback url\nthat can receive events
+
+YourApplication->>Webhooks: Create a Hook
+Webhooks-->YourApplication: Hooks created successfully
+File/Folder-->>Webhooks: File modified
+Webhooks->>YourCallbackServer: Event dm.version.modified
+YourCallbackServer-->Webhooks: Returns 200 status code\n within 6 seconds (acknowledgement)
+File/Folder-->>Webhooks: File deleted
+Webhooks->>YourCallbackServer: Even dm.version.deleted
+YourCallbackServer-->Webhooks: Returns 200 status code
+File/Folder-->>Webhooks: Folder deleted
+Webhooks->>YourCallbackServer: Even dm.folder.deleted
+YourCallbackServer-->Webhooks: Returns 200 status code
