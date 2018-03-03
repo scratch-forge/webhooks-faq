@@ -6,17 +6,17 @@
 * Go back to [Forge Platform](https://developer.autodesk.com/) after Sign In if it is not redirected automatically
 * Create a Forge App using [Create App](https://developer.autodesk.com/myapps)
 ![Create App 1](../image/1.png)
-..* If you want to access Webhooks API, don't forget to select **Webhook API** (and, Data Management API since you will be listening to events coming from file/folder/project operations)
+  * If you want to access Webhooks API, don't forget to select **Webhook API** (and, Data Management API since you will be listening to events coming from file/folder/project operations)
 ![Create App 2](../image/2.png)
-..* Provide a `App Name` such as `Webhooks-TestApp` for your Forge App
-..* Provide App description (Optional)
-..* Set a `Callback URL`. This Callback URL is used for [3-legged](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-3-legged-token/) Authentication fLow. And, this callback URL is different from Webhooks callback URL we will be registering later.
-..* If you have already a working server which can receive 3-legged Authentication Token then you can move onto the next step. You can setup  [ngrok](https://ngrok.com) test server if you dont have a server ready yet. Please see **Setup ngrok server for Callback URL** section for detailed steps.
-..* Provide callback URL in `Callback URL` field. If you are using ngrok, copy and paste the `Forwarding` URL
+  * Provide a `App Name` such as `Webhooks-TestApp` for your Forge App
+  * Provide App description (Optional)
+  * Set a `Callback URL`. This Callback URL is used for [3-legged](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-3-legged-token/) Authentication fLow. And, this callback URL is different from Webhooks callback URL we will be registering later.
+  * If you have already a working server which can receive 3-legged Authentication Token then you can move onto the next step. You can setup  [ngrok](https://ngrok.com) test server if you dont have a server ready yet. Please see **Setup ngrok server for Callback URL** section for detailed steps.
+  * Provide callback URL in `Callback URL` field. If you are using ngrok, copy and paste the `Forwarding` URL
 ![Create App 3](../image/3.png)
-..* Please leave `Your Website URL` empty for this example since its an optional field.
-..* Click on **CREATE APP**. Just now, you successfully created a Forge App.
-..* You will notice `Client ID` and `Client Secret` for your App. We will use it later for accessing Webhooks and other Forge APIs.
+  * Please leave `Your Website URL` empty for this example since its an optional field.
+  * Click on **CREATE APP**. Just now, you successfully created a Forge App.
+  * You will notice `Client ID` and `Client Secret` for your App. We will use it later for accessing Webhooks and other Forge APIs.
 ![Create App 4](../image/4.png)   
 
 
