@@ -25,7 +25,7 @@
 * Download [ngrok](https://ngrok.com/download)
 
 * Start ngrok with command: `./ngrok http 5678` See ngrok documentation for more information on ngrok commands. You should see something similar to:
-```sh
+```
 ngrok by @inconshreveable                                    
 
 Session Status                online                                          
