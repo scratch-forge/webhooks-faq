@@ -1,7 +1,10 @@
 ## Forge Webhooks
 
+Main Page:
+[https://scratch-forge.github.io/webhooks-faq](https://scratch-forge.github.io/webhooks-faq)
+
 #### Unofficial FAQ
-It is available [here](https://scratch-forge.github.io/webhooks-faq/examples/FAQ)
+It is available [here](https://scratch-forge.github.io/webhooks-faq/FAQ)
 
 #### Create an App
 You can find details [here](https://scratch-forge.github.io/webhooks-faq/examples/part-1_create_app)
